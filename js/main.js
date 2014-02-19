@@ -6,7 +6,11 @@ angular
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'templates/home.html'
+                templateUrl: 'templates/home.html',
+                controller: function($scope){
+                    $scope.title = 'Home';
+                    $scope.items = ['1', '2', '3', '4'];
+                }
             })
             .state('about', {
                 url: '/about',
@@ -14,6 +18,9 @@ angular
             })
             .state('contact', {
                 url: '/contact',
-                templateUrl: 'templates/contact.html'
+                templateUrl: 'templates/contact.html',
+                controller: function($scope){
+                    $scope.title = 'Contact me';
+                }
             })
     }])
